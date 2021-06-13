@@ -35,7 +35,7 @@ namespace UI
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.txtDocument = new System.Windows.Forms.MaskedTextBox();
-            this.btnSendForm = new System.Windows.Forms.Button();
+            this.BtnSendForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -95,21 +95,22 @@ namespace UI
             this.txtDocument.Size = new System.Drawing.Size(122, 22);
             this.txtDocument.TabIndex = 7;
             // 
-            // btnSendForm
+            // BtnSendForm
             // 
-            this.btnSendForm.Location = new System.Drawing.Point(357, 162);
-            this.btnSendForm.Name = "btnSendForm";
-            this.btnSendForm.Size = new System.Drawing.Size(149, 23);
-            this.btnSendForm.TabIndex = 8;
-            this.btnSendForm.Text = "Enviar formulário";
-            this.btnSendForm.UseVisualStyleBackColor = true;
+            this.BtnSendForm.Location = new System.Drawing.Point(357, 162);
+            this.BtnSendForm.Name = "BtnSendForm";
+            this.BtnSendForm.Size = new System.Drawing.Size(149, 23);
+            this.BtnSendForm.TabIndex = 8;
+            this.BtnSendForm.Text = "Enviar formulário";
+            this.BtnSendForm.UseVisualStyleBackColor = true;
+            this.BtnSendForm.Click += new System.EventHandler(this.BtnSendForm_Click);
             // 
             // FrmUserRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 554);
-            this.Controls.Add(this.btnSendForm);
+            this.Controls.Add(this.BtnSendForm);
             this.Controls.Add(this.txtDocument);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtName);
@@ -133,7 +134,7 @@ namespace UI
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.MaskedTextBox txtTel;
         private System.Windows.Forms.MaskedTextBox txtDocument;
-        private System.Windows.Forms.Button btnSendForm;
+        private System.Windows.Forms.Button BtnSendForm;
     }
 }
 

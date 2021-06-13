@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace UI
         public FrmUserRegistration()
         {
             InitializeComponent();
+        }
+
+        private void BtnSendForm_Click(object sender, EventArgs e)
+        {
+            var user = new User();
         }
     }
 }

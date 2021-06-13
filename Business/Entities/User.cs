@@ -6,20 +6,20 @@ using System.IO;
 
 namespace Business.Entities
 {
-    class Usuario : Base
+    public class User : Base
     {
-        public Usuario()
+        public User()
         {
         }
 
-        public Usuario(string nome, string telefone, string email) : base(nome, telefone, email)
+        public User(string nome, string telefone, string email) : base(nome, telefone, email)
         {
         }
 
         public override string ToString()
         {
             return $"Nome: {this.Nome}\n"
-                  + $"Telefone: {this.Telefone}\n"
+                  + $"Telefone: {this.Cpf}\n"
                   + $"Email: {this.Email}\n";
         }
     }
