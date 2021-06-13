@@ -1,5 +1,8 @@
-﻿using System;
+﻿
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 
 namespace Database
@@ -24,7 +27,16 @@ namespace Database
 
         public virtual void Salvar()
         {
-            throw new NotImplementedException();
+            string stringConexao = "server=localhost;database=SistemaTresCamadas;uid=root;uid=dev; password=dev_app";
+
+            using (var conn = new MySqlConnection(stringConexao))
+            {
+                string query = $"INSERT INTO {this.GetType().Name}s(Nome,Email,Cpf) Values('{this.Nome}','{this.Email}','{this.Cpf}')";
+                var command = new MySqlCommand(query,conn);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+            }
         }
 
         public void SetCpf(string cpf) => this.Cpf = cpf;

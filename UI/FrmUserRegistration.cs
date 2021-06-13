@@ -20,7 +20,13 @@ namespace UI
 
         private void BtnSendForm_Click(object sender, EventArgs e)
         {
-            var user = new User();
+            var user = new Usuario(txtName.Text,txtEmail.Text,txtDocumento.Text);
+            user.Salvar();
+        }
+
+        private void lblTel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
